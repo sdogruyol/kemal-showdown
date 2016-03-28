@@ -1,0 +1,39 @@
+<div>
+  <h2>Welcome to Kemal!</h2>
+  <p>Kemal is a Crystal Web Framework targeting to be crazy fast, scalable and simple.</p>
+</div>
+
+<div>
+  <div>
+    <h4>Resources: <%= @title %></h4>
+    <ul>
+      <li>
+        <a href='http://kemalcr.com/docs'>Docs</a>
+      </li>
+      <li>
+        <a href='https://github.com/sdogruyol/kemal'>Source</a>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <h4>Help</h4>
+    <ul>
+      <li>
+        <a href="https://github.com/sdogruyol/kemal/issues">Issues</a>
+      </li>
+    </ul>
+
+    <h4>Team Members</h4>
+    <ul>
+      <% for member in @members do %>
+        <li>
+          <%= erb :_bio, locals: {member: member} %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <hr>
+  <b>Enjoy it!</b>
+</div>
