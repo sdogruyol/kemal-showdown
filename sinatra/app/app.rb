@@ -6,7 +6,10 @@ get '/:title' do
   @title = params[:title]
 
   @members = [
-    { name: 'Serdar Dogruyol' }
+    { name: 'Serdar Dogruyol' },
+    { name: 'Fatih Kadir Akin' },
+    { name: 'Askin Gedik' },
+    { name: 'Ary Borenszweig'}
   ]
 
   erb :index
