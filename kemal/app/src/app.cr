@@ -2,8 +2,8 @@ require "kemal"
 
 logging false
 
-get "/" do |env|
-  title = env.params.query["title"]
+get "/:title" do |env|
+  title = env.params.url["title"]
 
   members = [
     { name: "Serdar Dogruyol" }

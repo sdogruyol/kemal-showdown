@@ -2,7 +2,7 @@ require 'sinatra'
 
 configure { set :logging, false }
 
-get '/' do
+get '/:title' do
   @title = params[:title]
 
   @members = [

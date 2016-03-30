@@ -18,7 +18,7 @@ crystal build --release src/app.cr
 ./app -p 3001
 ```
 
-You should see the app running in `http://localhost:3001/?title=kemal`.
+You should see the app running in `http://localhost:3001/kemal`.
 
 ## Sinatra
 
@@ -29,7 +29,7 @@ cd sinatra/app
 RACK_ENV=production ruby app.rb -p 3001
 ```
 
-You should see the app running in `http://localhost:3001/?title=kemal`.
+You should see the app running in `http://localhost:3001/kemal`.
 
 ## Rails
 
@@ -38,4 +38,15 @@ cd rails/app
 RAILS_ENV=production rails s -p 3001
 ```
 
-You should see the app running in `http://localhost:3001/?title=kemal`.
+You should see the app running in `http://localhost:3001/kemal`.
+
+## Phoenix
+
+Be sure to have Elixir `1.1.0`
+
+```
+cd phoenix/app
+mix deps.get
+MIX_ENV=prod mix compile
+PORT=3001 MIX_ENV=prod elixir -pa _build/prod/consolidated -S mix phoenix.server -p 3001
+```

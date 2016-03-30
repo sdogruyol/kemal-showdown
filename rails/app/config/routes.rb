@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root 'dashboard#index'
+  get '/:title', to: 'dashboard#index'
 end
