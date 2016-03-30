@@ -26,7 +26,7 @@ Ruby 2.3.0 is preferred.
 
 ```
 cd sinatra/app
-RACK_ENV=production ruby app.rb -p 3001
+RACK_ENV=production rackup -p 3001
 ```
 
 You should see the app running in `http://localhost:3001/kemal`.
