@@ -55,5 +55,10 @@ PORT=3001 MIX_ENV=prod elixir -pa _build/prod/consolidated -S mix phoenix.server
 
 ```
 go build server.go
-GOMAXPROCS=4 MARTINI_ENV=production ./server
+PORT=3001 GOMAXPROCS=4 MARTINI_ENV=production ./server
 ```
+
+## Gin
+
+```
+GOMAXPROCS=4 PORT=3001 GIN_MODE=release go run server.go
