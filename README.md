@@ -2,6 +2,10 @@
 
 :horse_racing: benchmark Kemal with Sinatra-like web frameworks
 
+# Results
+
+Check the results <a href="https://plot.ly/~jasdeepsingh/1/" target="_blank">here</a>
+
 # Running The Benchmark
 
 The benchmark is done with `wrk` with the following command.
